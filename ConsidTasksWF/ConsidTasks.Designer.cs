@@ -41,13 +41,13 @@
             this.button_Select_Directory = new System.Windows.Forms.Button();
             this.label_desc = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_Conversion_Result = new System.Windows.Forms.Label();
             this.button_convert_Xml = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_Selected_Xml_File = new System.Windows.Forms.TextBox();
             this.button_select_Xml_File = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label_Conversion_Result = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -188,6 +188,14 @@
             this.tabPage2.Text = "Task 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label_Conversion_Result
+            // 
+            this.label_Conversion_Result.AutoSize = true;
+            this.label_Conversion_Result.Location = new System.Drawing.Point(6, 159);
+            this.label_Conversion_Result.Name = "label_Conversion_Result";
+            this.label_Conversion_Result.Size = new System.Drawing.Size(0, 13);
+            this.label_Conversion_Result.TabIndex = 5;
+            // 
             // button_convert_Xml
             // 
             this.button_convert_Xml.Location = new System.Drawing.Point(6, 113);
@@ -234,20 +242,13 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Select XML file to convert:";
             // 
-            // label_Conversion_Result
-            // 
-            this.label_Conversion_Result.AutoSize = true;
-            this.label_Conversion_Result.Location = new System.Drawing.Point(6, 159);
-            this.label_Conversion_Result.Name = "label_Conversion_Result";
-            this.label_Conversion_Result.Size = new System.Drawing.Size(0, 13);
-            this.label_Conversion_Result.TabIndex = 5;
-            // 
             // ConsidTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 367);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConsidTasks";
             this.Text = "ConsidTasksWF - Per Jansson";
             this.tabControl1.ResumeLayout(false);

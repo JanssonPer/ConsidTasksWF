@@ -173,14 +173,18 @@ namespace ConsidTasksWF
                 //We call on our method to begin conversion.
                 TraverseNodes(dataNodes, ref xmlTest);
 
-                //We save our newly converted XML document to be sorted.
-                xmlTest.Save("tobesorted.xml");
+                //Create a path for the edited xml document to be saved and accessed at.
+                string theDirectory = AppDomain.CurrentDomain.BaseDirectory + "\\tobesorted.xml";
 
+                //We save our newly converted XML document to be sorted.
+                xmlTest.Save(theDirectory);
+                               
                 //We create an LINQ-version of our XML document (this was the only way I was able to do the sorting)
-                XDocument xdoc = XDocument.Load("tobesorted.xml");
+                XDocument xdoc = XDocument.Load(theDirectory);
 
                 //We call on our sort method, pass on the LINQ-version and prompt the user to select a location for sorted XML file to be saved.                
                 SaveFileDialog sFD = new SaveFileDialog();
+                sFD.DefaultExt = "xml";
                 if (sFD.ShowDialog() == DialogResult.OK)
                 {
                     SortXmlDocument(xdoc).Save(sFD.FileName);
@@ -237,8 +241,7 @@ namespace ConsidTasksWF
                 user.Add(elements);
             }
 
-            //Save the new version and return the xml document.
-            xdoc.Save("OrdersByDate.xml");
+            //Save the new version and return the xml document.            
             return xdoc;
         }
     }
